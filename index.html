@@ -666,6 +666,35 @@ h1 {
 }
     
 
+/* ===== VINTAGE PHOTO SCRAPBOOK ===== */
+
+.photo-frame {
+  border: 1px solid #C5A66A;
+  border-radius: 2px;
+  padding: 10px 10px 25px;
+  background: #F9F5ED;
+  box-shadow:
+    0 5px 15px rgba(75,65,52,.12),
+    4px 5px 0 rgba(255,255,255,.65);
+  transform: rotate(-1.5deg);
+}
+
+.photo-frame img {
+  border: 1px solid rgba(118,92,72,.15);
+}
+
+.photo-frame::after {
+  content: "A MEMORY TO REMEMBER";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #806F60;
+  font: 7px Arial,sans-serif;
+  letter-spacing: 1.5px;
+}
+    
   </style>
 </head>
 <body>
