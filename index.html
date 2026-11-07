@@ -153,13 +153,14 @@
 
 <script>
   const params = new URLSearchParams(window.location.search);
-  const guest = params.get('to');
+const guest = params.get('to');
 
-  if (guest) {
-    document.getElementById('guestName').textContent =
-      guest.replace(/\+/g, ' ');
-  }
+if (guest) {
+  document.getElementById('guestName').textContent = guest;
 
+  // Sembunyikan fitur pembuat link dari tamu
+  document.querySelector('.generator').style.display = 'none';
+}
   // COUNTDOWN WISUDA
   const target = new Date('2026-11-12T13:00:00+09:00').getTime();
 
