@@ -150,66 +150,101 @@
   </main>
   <footer>UNDANGAN WISUDA · FARHAN ALI MIRZANY RAHARENG</footer>
 </div>
+
 <script>
   const params = new URLSearchParams(window.location.search);
   const guest = params.get('to');
-  if (guest) document.getElementById('guestName').textContent = guest.replace(/\+/g,' ');
+
+  if (guest) {
+    document.getElementById('guestName').textContent =
+      guest.replace(/\+/g, ' ');
+  }
+
+  // COUNTDOWN WISUDA
   const target = new Date('2026-11-12T13:00:00+09:00').getTime();
-  function tick(){
+
+  function tick() {
     const diff = target - Date.now();
-    if(diff <= 0){
-      ['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='00');
-      document.getElementById('countdownNote').textContent='Hari wisuda telah tiba. Terima kasih atas doa dan kehadiran Anda.';
+
+    if (diff <= 0) {
+      ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+        document.getElementById(id).textContent = '00';
+      });
+
+      document.getElementById('countdownNote').textContent =
+        'Hari wisuda telah tiba. Terima kasih atas doa dan kehadiran Anda.';
       return;
     }
+
     const vals = {
-      days:Math.floor(diff/86400000),
-      hours:Math.floor(diff%86400000/3600000),
-      minutes:Math.floor(diff%3600000/60000),
-      seconds:Math.floor(diff%60000/1000)
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor(diff % 86400000 / 3600000),
+      minutes: Math.floor(diff % 3600000 / 60000),
+      seconds: Math.floor(diff % 60000 / 1000)
     };
-    Object.entries(vals).forEach(([id,val])=>document.getElementById(id).textContent=String(val).padStart(2,'0'));
-  }
-  tick(); setInterval(tick,1000);
-  let currentLink='';
-  function makeGuestLink(){
-    const name=document.getElementById('guestInput').value.trim();
-    if(!name){document.getElementById('guestLink').textContent='Masukkan nama tamu terlebih dahulu.';return;}
-    currentLink=location.origin+location.pathname+'?to='+encodeURIComponent(name);
-    document.getElementById('guestLink').textContent=currentLink;
-    document.getElementById('copyBtn').style.display='inline-block';
-  }
-  async function copyGuestLink(){
-    try{await navigator.clipboard.writeText(currentLink);document.getElementById('copyBtn').textContent='LINK TERSALIN';}
-    catch(e){document.getElementById('guestLink').textContent='Tekan lama tautan di atas lalu pilih Salin.';}
+
+    Object.entries(vals).forEach(([id, val]) => {
+      document.getElementById(id).textContent =
+        String(val).padStart(2, '0');
+    });
   }
 
-<script>
-let musikDimulai = false;
+  tick();
+  setInterval(tick, 1000);
 
-function mulaiUndangan() {
-  if (musikDimulai) return;
+  // LINK KHUSUS TAMU
+  let currentLink = '';
 
-  musikDimulai = true;
+  function makeGuestLink() {
+    const name = document.getElementById('guestInput').value.trim();
 
-  const musik = document.createElement("iframe");
+    if (!name) {
+      document.getElementById('guestLink').textContent =
+        'Masukkan nama tamu terlebih dahulu.';
+      return;
+    }
 
-  musik.src =
-    "https://www.youtube.com/embed/PWEGNYikuu0?autoplay=1&loop=1&playlist=PWEGNYikuu0";
+    currentLink = location.origin + location.pathname +
+      '?to=' + encodeURIComponent(name);
 
-  musik.allow = "autoplay; encrypted-media";
-  musik.style.position = "fixed";
-  musik.style.width = "1px";
-  musik.style.height = "1px";
-  musik.style.opacity = "0.01";
-  musik.style.bottom = "0";
-  musik.style.right = "0";
-  musik.style.border = "0";
+    document.getElementById('guestLink').textContent = currentLink;
+    document.getElementById('copyBtn').style.display = 'inline-block';
+  }
 
-  document.body.appendChild(musik);
-}
+  async function copyGuestLink() {
+    try {
+      await navigator.clipboard.writeText(currentLink);
+      document.getElementById('copyBtn').textContent = 'LINK TERSALIN';
+    } catch (e) {
+      document.getElementById('guestLink').textContent =
+        'Tekan lama tautan di atas lalu pilih Salin.';
+    }
+  }
+
+  // MUSIK UNDANGAN
+  let musikDimulai = false;
+
+  function mulaiUndangan() {
+    if (musikDimulai) return;
+
+    const musik = document.createElement('iframe');
+
+    musik.src =
+      'https://www.youtube.com/embed/PWEGNYikuu0?autoplay=1&loop=1&playlist=PWEGNYikuu0';
+
+    musik.allow = 'autoplay; encrypted-media';
+    musik.width = '200';
+    musik.height = '200';
+
+    musik.style.position = 'fixed';
+    musik.style.left = '-250px';
+    musik.style.bottom = '0';
+    musik.style.opacity = '0.01';
+    musik.style.border = '0';
+
+    document.body.appendChild(musik);
+    musikDimulai = true;
+  }
 </script>
-</body>
-  </script>
 </body>
 </html>
