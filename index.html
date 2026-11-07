@@ -275,6 +275,208 @@ footer{
   section{padding:95px 30px}
   .cover{padding:70px}
   }
+    
+/* =================================
+   SOFT VINTAGE SCRAPBOOK DECORATION
+================================= */
+
+/* Tekstur denim lembut */
+.page {
+  background-color: #A9C4D8;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.045) 0px,
+      rgba(255,255,255,.045) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(67,100,125,.045) 0px,
+      rgba(67,100,125,.045) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    radial-gradient(
+      ellipse at center,
+      #DCE7EC 0%,
+      #A9C4D8 100%
+    );
+}
+
+/* Sampul seperti kertas jurnal */
+.cover {
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255,255,255,.18),
+      transparent 72%
+    );
+}
+
+/* Kertas utama pada sampul */
+.cover-inner {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.5),
+      rgba(243,235,221,.96)
+    );
+  border: 1px solid rgba(118,92,72,.3);
+  padding: 48px 25px;
+  box-shadow:
+    0 12px 30px rgba(63,76,85,.13),
+    4px 5px 0 rgba(255,255,255,.35);
+  transform: rotate(-.5deg);
+}
+
+/* Efek selotip kertas */
+.cover-inner::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 23px;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(197,166,106,.42);
+  border-left: 1px dashed rgba(118,92,72,.25);
+  border-right: 1px dashed rgba(118,92,72,.25);
+}
+
+/* Label perangko vintage */
+.cover-inner::after {
+  content: "CLASS OF 2026";
+  position: absolute;
+  top: 17px;
+  right: 12px;
+  padding: 6px 8px;
+  border: 1px dashed rgba(118,92,72,.55);
+  color: #806F60;
+  background: rgba(255,255,255,.35);
+  font: 8px Arial,sans-serif;
+  letter-spacing: 1px;
+  transform: rotate(7deg);
+}
+
+/* Judul bergaya buku kenangan */
+h1, h2 {
+  text-shadow: 1px 1px rgba(255,255,255,.7);
+}
+
+/* Bagian isi seperti halaman scrapbook */
+section {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(197,166,106,.08),
+      transparent 24%
+    ),
+    #F3EBDD;
+}
+
+/* Bingkai halus pada setiap bagian */
+.section-inner {
+  position: relative;
+  padding: 30px 18px;
+  border: 1px dashed rgba(118,92,72,.28);
+  background: rgba(255,255,255,.23);
+}
+
+/* Ornamen bintang kecil */
+.section-inner::before {
+  content: "✧";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  color: #C5A66A;
+  font-size: 21px;
+}
+
+/* Foto seperti cetakan Polaroid */
+.photo-frame {
+  background: #F9F5ED;
+  border: 1px solid #D1B77E;
+  padding: 10px 10px 22px;
+  box-shadow:
+    3px 6px 15px rgba(75,65,52,.13);
+  transform: rotate(-2deg);
+}
+
+/* Selotip kecil pada foto */
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 65px;
+  height: 18px;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+  background: rgba(197,166,106,.48);
+}
+
+/* Kartu informasi seperti potongan kertas */
+.details {
+  background:
+    linear-gradient(
+      145deg,
+      #F9F5ED,
+      #E9DFC9
+    );
+  border: 1px dashed rgba(118,92,72,.45);
+  box-shadow: 3px 5px 12px rgba(75,65,52,.08);
+}
+
+/* Countdown seperti label jurnal */
+.timebox {
+  background: #F9F5ED;
+  border: 1px dashed rgba(118,92,72,.45);
+  box-shadow: 2px 3px 7px rgba(75,65,52,.06);
+}
+
+/* Tombol bergaya label vintage */
+.btn {
+  border: 1px dashed #765C48;
+  box-shadow: 3px 4px 0 rgba(118,92,72,.13);
+  transition: .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 6px 0 rgba(118,92,72,.13);
+}
+
+/* Hiasan bagian bawah */
+footer {
+  border-top: 1px dashed rgba(118,92,72,.3);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #A9C4D8,
+      #A9C4D8 8px,
+      #B5CCDC 8px,
+      #B5CCDC 16px
+    );
+}
+
+/* Tampilan HP */
+@media(max-width:480px) {
+  .cover-inner {
+    padding: 52px 18px 38px;
+  }
+
+  .section-inner {
+    padding: 28px 13px;
+  }
+
+  .photo-frame {
+    width: min(230px,70vw);
+  }
+}
+
   </style>
 </head>
 <body>
