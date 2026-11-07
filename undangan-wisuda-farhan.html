@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081629">
+  <title>Undangan Wisuda | Farhan Ali Mirzany Rahareng</title>
+  <style>
+    :root{--navy:#081629;--navy2:#102541;--gold:#d7b56d;--gold2:#f2dfad;--cream:#f7f1e5;--muted:#c9c1b2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--navy);color:var(--cream);font-family:Georgia,"Times New Roman",serif}
+    .page{min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#183354 0%,var(--navy) 58%)}
+    .ornament{position:absolute;inset:14px;border:1px solid rgba(215,181,109,.55);pointer-events:none}
+    .ornament:before,.ornament:after{content:"✦";position:absolute;color:var(--gold);font-size:20px}
+    .ornament:before{top:-11px;left:50%;transform:translateX(-50%);background:var(--navy);padding:0 12px}
+    .ornament:after{bottom:-11px;left:50%;transform:translateX(-50%);background:var(--navy);padding:0 12px}
+    .cover{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:54px 30px;position:relative}
+    .cover-inner{max-width:560px;position:relative;z-index:1}
+    .eyebrow{letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);font:11px Arial,sans-serif}
+    .rule{width:76px;height:1px;background:var(--gold);margin:24px auto}
+    h1{font-size:clamp(34px,9vw,58px);line-height:1.12;font-weight:400;color:var(--gold2);margin:16px 0}
+    .subtitle{font:13px/1.8 Arial,sans-serif;color:var(--muted);letter-spacing:.06em}
+    .guest{color:var(--gold2);font-size:21px;margin:13px 0 28px}
+    .btn{display:inline-block;border:1px solid var(--gold);padding:14px 25px;color:var(--gold2);text-decoration:none;background:transparent;letter-spacing:.16em;font:11px Arial,sans-serif;cursor:pointer}
+    .btn:hover{background:rgba(215,181,109,.12)}
+    section{padding:76px 24px;text-align:center;position:relative}
+    .section-inner{max-width:650px;margin:auto}
+    .kicker{font:10px Arial,sans-serif;letter-spacing:.25em;color:var(--gold);text-transform:uppercase}
+    h2{font-size:clamp(27px,7vw,38px);font-weight:400;color:var(--gold2);margin:13px 0 20px}
+    p{font:14px/1.9 Arial,sans-serif;color:var(--muted)}
+    .photo-frame{width:min(230px,70vw);height:290px;margin:30px auto;border:1px solid var(--gold);padding:8px;position:relative;background:linear-gradient(145deg,#1a3554,#0b1a2d)}
+    .photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-fallback{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--gold2);font-size:48px}
+    .photo-fallback small{font:10px Arial,sans-serif;letter-spacing:.15em;margin-top:12px;color:var(--muted)}
+    .details{border:1px solid rgba(215,181,109,.5);padding:25px 20px;margin:30px auto;max-width:500px;background:rgba(255,255,255,.025)}
+    .detail{padding:13px 0;border-bottom:1px solid rgba(215,181,109,.18)}
+    .detail:last-child{border:0}
+    .detail b{display:block;color:var(--gold2);font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+    .detail span{font:16px/1.6 Georgia,serif}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:30px auto;max-width:520px}
+    .timebox{border:1px solid rgba(215,181,109,.5);padding:15px 4px;background:rgba(255,255,255,.025)}
+    .timebox strong{display:block;font-size:29px;font-weight:400;color:var(--gold2)}
+    .timebox small{font:9px Arial,sans-serif;color:var(--muted);letter-spacing:.1em}
+    footer{text-align:center;padding:30px 20px 55px;color:var(--gold);font:10px Arial,sans-serif;letter-spacing:.12em}
+    .generator{margin:30px auto 0;max-width:520px;text-align:left;border-top:1px solid rgba(215,181,109,.25);padding-top:22px}
+    .generator label{display:block;color:var(--gold2);font:11px Arial,sans-serif;margin-bottom:9px}
+    .generator input{width:100%;padding:13px;background:#0d2037;border:1px solid rgba(215,181,109,.5);color:white;font-size:15px;margin-bottom:10px}
+    .generator output{display:block;word-break:break-all;color:var(--gold2);font:12px/1.6 Arial,sans-serif;margin-top:12px}
+    @media(min-width:700px){section{padding:95px 30px}.cover{padding:70px}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="cover">
+    <div class="ornament"></div>
+    <div class="cover-inner">
+      <div class="eyebrow">Undangan Wisuda</div>
+      <div class="rule"></div>
+      <div class="subtitle">Dengan penuh rasa syukur</div>
+      <h1>Farhan Ali<br>Mirzany Rahareng</h1>
+      <div class="subtitle">Mengundang Bapak/Ibu/Saudara/i untuk hadir<br>dan memberikan doa restu</div>
+      <div class="rule"></div>
+      <div class="subtitle">Kepada Yth.</div>
+      <div class="guest" id="guestName">Tamu Undangan</div>
+      <a class="btn" href="#undangan">BUKA UNDANGAN</a>
+    </div>
+  </header>
+
+  <main id="undangan">
+    <section>
+      <div class="section-inner">
+        <div class="kicker">Sebuah pencapaian, sebuah perjalanan</div>
+        <h2>Dengan Penuh Syukur</h2>
+        <p>Dengan memanjatkan puji dan syukur ke hadirat Tuhan Yang Maha Esa, atas kasih dan penyertaan-Nya, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir dalam acara wisuda.</p>
+        <div class="photo-frame">
+          <img src="foto-wisudawan.jpg" alt="Foto Farhan Ali Mirzany Rahareng" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex'">
+          <div class="photo-fallback" id="photoFallback">F<span style="font-size:12px">FOTO WISUDAWAN</span><small>Tambahkan foto bernama<br>foto-wisudawan.jpg</small></div>
+        </div>
+        <div class="kicker">Wisudawan</div>
+        <h2>Farhan Ali Mirzany Rahareng</h2>
+        <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="kicker">Catat waktunya</div>
+        <h2>Informasi Wisuda</h2>
+        <div class="details">
+          <div class="detail"><b>Hari / Tanggal</b><span>Kamis, 12 November 2026</span></div>
+          <div class="detail"><b>Waktu</b><span>13.00 WIT</span></div>
+          <div class="detail"><b>Tempat</b><span>Jl. Yos Sudarso, Komplek Pertamina<br>Tual, Maluku</span></div>
+        </div>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jl.%20Yos%20Sudarso%20Komplek%20Pertamina%20Tual%20Maluku">BUKA LOKASI</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="kicker">Kami menantikan kehadiran Anda</div>
+        <h2>Menuju Hari Wisuda</h2>
+        <p>Terima kasih atas doa, dukungan, dan perhatian yang telah diberikan. Kehadiran serta doa restu Bapak/Ibu/Saudara/i akan menjadi kebahagiaan tersendiri bagi kami.</p>
+        <div class="countdown">
+          <div class="timebox"><strong id="days">--</strong><small>HARI</small></div>
+          <div class="timebox"><strong id="hours">--</strong><small>JAM</small></div>
+          <div class="timebox"><strong id="minutes">--</strong><small>MENIT</small></div>
+          <div class="timebox"><strong id="seconds">--</strong><small>DETIK</small></div>
+        </div>
+        <p id="countdownNote"></p>
+        <div class="generator">
+          <label for="guestInput">PEMBUAT LINK KHUSUS TAMU</label>
+          <input id="guestInput" type="text" placeholder="Tuliskan nama tamu">
+          <button class="btn" type="button" onclick="makeGuestLink()">BUAT LINK TAMU</button>
+          <output id="guestLink"></output>
+          <button class="btn" id="copyBtn" type="button" style="display:none;margin-top:10px" onclick="copyGuestLink()">SALIN LINK</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>UNDANGAN WISUDA · FARHAN ALI MIRZANY RAHARENG</footer>
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const guest = params.get('to');
+  if (guest) document.getElementById('guestName').textContent = guest.replace(/\+/g,' ');
+  const target = new Date('2026-11-12T13:00:00+09:00').getTime();
+  function tick(){
+    const diff = target - Date.now();
+    if(diff <= 0){
+      ['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='00');
+      document.getElementById('countdownNote').textContent='Hari wisuda telah tiba. Terima kasih atas doa dan kehadiran Anda.';
+      return;
+    }
+    const vals = {
+      days:Math.floor(diff/86400000),
+      hours:Math.floor(diff%86400000/3600000),
+      minutes:Math.floor(diff%3600000/60000),
+      seconds:Math.floor(diff%60000/1000)
+    };
+    Object.entries(vals).forEach(([id,val])=>document.getElementById(id).textContent=String(val).padStart(2,'0'));
+  }
+  tick(); setInterval(tick,1000);
+  let currentLink='';
+  function makeGuestLink(){
+    const name=document.getElementById('guestInput').value.trim();
+    if(!name){document.getElementById('guestLink').textContent='Masukkan nama tamu terlebih dahulu.';return;}
+    currentLink=location.origin+location.pathname+'?to='+encodeURIComponent(name);
+    document.getElementById('guestLink').textContent=currentLink;
+    document.getElementById('copyBtn').style.display='inline-block';
+  }
+  async function copyGuestLink(){
+    try{await navigator.clipboard.writeText(currentLink);document.getElementById('copyBtn').textContent='LINK TERSALIN';}
+    catch(e){document.getElementById('guestLink').textContent='Tekan lama tautan di atas lalu pilih Salin.';}
+  }
+</script>
+</body>
+</html>
