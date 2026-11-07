@@ -476,6 +476,106 @@ footer {
     width: min(230px,70vw);
   }
 }
+    
+/* ===== DETAIL SCRAPBOOK VINTAGE ===== */
+
+/* Motif titik pada latar halaman */
+.page {
+  background-image:
+    radial-gradient(rgba(118,92,72,.16) 1px, transparent 1px),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.12) 0px,
+      rgba(255,255,255,.12) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    linear-gradient(135deg,#DCE7EC,#A9C4D8);
+  background-size: 18px 18px, auto, auto;
+}
+
+/* Garis jahitan dekoratif pada sampul */
+.cover {
+  outline: 1px dashed rgba(118,92,72,.35);
+  outline-offset: -24px;
+}
+
+/* Ornamen kecil di bawah judul */
+.rule {
+  position: relative;
+}
+
+.rule::after {
+  content: "✧";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: #F3EBDD;
+  padding: 0 9px;
+  color: #C5A66A;
+  font-size: 19px;
+}
+
+/* Sudut halaman seperti lembar scrapbook */
+.section-inner {
+  box-shadow:
+    4px 5px 0 rgba(118,92,72,.06),
+    8px 9px 0 rgba(197,166,106,.08);
+}
+
+/* Motif kertas halus */
+.details,
+.timebox {
+  background-image:
+    radial-gradient(rgba(118,92,72,.08) .7px, transparent .7px),
+    linear-gradient(135deg,#F9F5ED,#E9DFC9);
+  background-size: 9px 9px, auto;
+}
+
+/* Hiasan bunga kecil di judul bagian */
+.kicker::before {
+  content: "✿  ";
+  color: #C5A66A;
+}
+
+.kicker::after {
+  content: "  ✿";
+  color: #C5A66A;
+}
+
+/* Efek kartu foto cetak */
+.photo-frame {
+  box-shadow:
+    0 5px 15px rgba(75,65,52,.13),
+    4px 5px 0 rgba(255,255,255,.7);
+}
+
+/* Detail label vintage */
+.detail b {
+  border-bottom: 1px dashed rgba(118,92,72,.3);
+  padding-bottom: 7px;
+}
+
+/* Efek interaksi lembut */
+.photo-frame,
+.details,
+.timebox {
+  transition: transform .3s ease;
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) translateY(-3px);
+}
+
+/* Menghormati pengaturan gerakan perangkat */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+    
 
   </style>
 </head>
