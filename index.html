@@ -695,6 +695,165 @@ h1 {
   letter-spacing: 1.5px;
 }
     
+/* ===== VINTAGE SCRAPBOOK CONTENT ===== */
+
+section {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(197,166,106,.12), transparent 18%),
+    radial-gradient(circle at 92% 85%, rgba(169,196,216,.25), transparent 20%),
+    #F3EBDD;
+}
+
+/* Lapisan kertas halaman */
+.section-inner {
+  background: #F9F5ED;
+  border: 1px solid rgba(118,92,72,.25);
+  padding: 38px 22px;
+  box-shadow:
+    4px 5px 0 rgba(118,92,72,.07),
+    8px 9px 0 rgba(197,166,106,.10);
+  position: relative;
+}
+
+/* Garis jahitan kertas */
+.section-inner::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px dashed rgba(118,92,72,.22);
+  pointer-events: none;
+}
+
+/* Judul bagian */
+h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 2px;
+  background: #C5A66A;
+  bottom: 0;
+  left: 22.5%;
+}
+
+/* Kartu informasi acara */
+.details {
+  position: relative;
+  border: 1px dashed rgba(118,92,72,.5);
+  border-radius: 3px;
+  padding: 30px 22px;
+  background: #E9DFC9;
+  box-shadow: 4px 5px 0 rgba(118,92,72,.08);
+}
+
+/* Label tanggal */
+.details::before {
+  content: "EVENT DETAILS";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  background: #A9C4D8;
+  border: 1px solid rgba(118,92,72,.3);
+  padding: 6px 14px;
+  color: #765C48;
+  font: 9px Arial,sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Countdown vintage */
+.timebox {
+  border: 1px dashed rgba(118,92,72,.5);
+  border-radius: 3px;
+  background: #F9F5ED;
+  padding: 18px 4px;
+  box-shadow: 3px 4px 0 rgba(118,92,72,.07);
+}
+
+.timebox strong {
+  font-family: Georgia,serif;
+  font-size: 29px;
+}
+
+.timebox small {
+  letter-spacing: 1.5px;
+}
+
+/* Tulisan deskripsi */
+section p {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Label kecil */
+.kicker {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px dashed rgba(118,92,72,.4);
+  background: rgba(169,196,216,.22);
+}
+
+/* Ruang antar elemen */
+.detail {
+  padding: 17px 5px;
+}
+
+/* Tampilan layar HP */
+@media(max-width:480px) {
+  .section-inner {
+    padding: 34px 15px;
+  }
+
+  .details {
+    padding: 28px 14px;
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+  .timebox strong {
+    font-size: 24px;
+  }
+    }
+    
+/* ===== VINTAGE PAGE FINISHING ===== */
+
+footer {
+  position: relative;
+  padding-top: 48px;
+}
+
+footer::before {
+  content: "✧  ❀  ✧";
+  display: block;
+  margin-bottom: 18px;
+  color: #765C48;
+  font-size: 20px;
+  letter-spacing: 9px;
+}
+
+.generator {
+  border-top: 1px dashed rgba(118,92,72,.35);
+  padding-top: 25px;
+}
+
+.generator input {
+  border-radius: 2px;
+}
+
+.generator .btn {
+  background: #A9C4D8;
+  }
+                   
   </style>
 </head>
 <body>
