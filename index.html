@@ -183,6 +183,31 @@
     try{await navigator.clipboard.writeText(currentLink);document.getElementById('copyBtn').textContent='LINK TERSALIN';}
     catch(e){document.getElementById('guestLink').textContent='Tekan lama tautan di atas lalu pilih Salin.';}
   }
+
+<script>
+let musikDimulai = false;
+
+function mulaiUndangan() {
+  if (musikDimulai) return;
+
+  musikDimulai = true;
+
+  const musik = document.createElement("iframe");
+
+  musik.src =
+    "https://www.youtube.com/embed/PWEGNYikuu0?autoplay=1&loop=1&playlist=PWEGNYikuu0";
+
+  musik.allow = "autoplay; encrypted-media";
+  musik.style.position = "fixed";
+  musik.style.width = "1px";
+  musik.style.height = "1px";
+  musik.style.opacity = "0.01";
+  musik.style.bottom = "0";
+  musik.style.right = "0";
+  musik.style.border = "0";
+
+  document.body.appendChild(musik);
+}
 </script>
 </body>
 </html>
