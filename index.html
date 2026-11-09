@@ -1880,29 +1880,30 @@ if (guest) {
   }
 
   // MUSIK UNDANGAN
-  let musikDimulai = false;
+  
+let musikDimulai = false;
 
-  function mulaiUndangan() {
-    if (musikDimulai) return;
+function mulaiUndangan() {
+  if (musikDimulai) return;
 
-    const musik = document.createElement('iframe');
+  const musik = document.createElement('iframe');
 
-    musik.src =
-      'https://www.youtube.com/embed/PWEGNYikuu0?autoplay=1&loop=1&playlist=PWEGNYikuu0';
+  musik.src = 'https://www.youtube.com/embed/HIRNdveLnJI?autoplay=1&loop=1&playlist=HIRNdveLnJI&playsinline=1';
 
-    musik.allow = 'autoplay; encrypted-media';
-    musik.width = '200';
-    musik.height = '200';
+  musik.allow = 'autoplay; encrypted-media';
+  musik.width = '200';
+  musik.height = '200';
+  musik.style.position = 'fixed';
+  musik.style.left = '-250px';
+  musik.style.bottom = '0';
+  musik.style.opacity = '0.01';
+  musik.style.border = '0';
 
-    musik.style.position = 'fixed';
-    musik.style.left = '-250px';
-    musik.style.bottom = '0';
-    musik.style.opacity = '0.01';
-    musik.style.border = '0';
+  document.body.appendChild(musik);
 
-    document.body.appendChild(musik);
-    musikDimulai = true;
-  }
+  musikDimulai = true;
+}
+
 </script>
 </body>
 </html>
