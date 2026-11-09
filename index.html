@@ -1691,6 +1691,80 @@ footer::before {
   }
                          
     
+/* ANIMASI DARK LUXURY A7X */
+
+@keyframes purpleGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(146,116,181,.12);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(146,116,181,.4);
+  }
+}
+
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes lightSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.cover-inner {
+  animation: purpleGlow 5s ease-in-out infinite;
+}
+
+.cover .ornament::before {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+.cover .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255,255,255,.18) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: lightSweep 5s linear infinite;
+  pointer-events: none;
+}
+
+.photo-frame {
+  animation: purpleGlow 6s ease-in-out infinite;
+}
+
+.section-inner {
+  animation: purpleGlow 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  }
+    
   </style>
 </head>
 <body>
