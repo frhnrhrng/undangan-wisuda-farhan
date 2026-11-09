@@ -2081,7 +2081,33 @@ if (guest) {
         'Tekan lama tautan di atas lalu pilih Salin.';
     }
   }
+// MUSIK AFTERLIFE - AVENGED SEVENFOLD
+let musikDimulai = false;
 
+function mulaiUndangan() {
+  if (musikDimulai) return;
+
+  const musik = document.createElement('iframe');
+
+  musik.src =
+    'https://www.youtube.com/embed/HIRNdveLnJI?autoplay=1&loop=1&playlist=HIRNdveLnJI&playsinline=1&controls=0';
+
+  musik.allow = 'autoplay; encrypted-media';
+  musik.title = 'Afterlife - Avenged Sevenfold';
+
+  musik.style.position = 'fixed';
+  musik.style.width = '1px';
+  musik.style.height = '1px';
+  musik.style.opacity = '0';
+  musik.style.pointerEvents = 'none';
+  musik.style.bottom = '0';
+  musik.style.left = '0';
+
+  document.body.appendChild(musik);
+
+  musikDimulai = true;
+}
+  
   </script>
 
 <div class="music-indicator" id="musicIndicator">
