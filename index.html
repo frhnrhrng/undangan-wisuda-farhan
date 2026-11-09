@@ -2082,30 +2082,7 @@ if (guest) {
     }
   }
 
-  // MUSIK UNDANGAN
-  
-let musikDimulai = false;
-
-function mulaiUndangan() {
-  if (musikDimulai) return;
-
-  const musik = document.createElement('iframe');
-
-  musik.src = 'https://www.youtube.com/embed/HIRNdveLnJI?autoplay=1&loop=1&playlist=HIRNdveLnJI&playsinline=1';
-
-  musik.allow = 'autoplay; encrypted-media';
-  musik.width = '200';
-  musik.height = '200';
-  musik.style.position = 'fixed';
-  musik.style.left = '-250px';
-  musik.style.bottom = '0';
-  musik.style.opacity = '0.01';
-  musik.style.border = '0';
-
-  document.body.appendChild(musik);
-
-  musikDimulai = true;
-}
+  </script>
 
 <div class="music-indicator" id="musicIndicator">
   <span class="music-dot"></span>
@@ -2118,6 +2095,5 @@ function mulaiUndangan() {
   </span>
 </div>
 
-</script>
 </body>
 </html>
