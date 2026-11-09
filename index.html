@@ -316,166 +316,69 @@ footer{
     );
 }
 
-/* Kertas utama pada sampul */
-.cover-inner {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.5),
-      rgba(243,235,221,.96)
-    );
-  border: 1px solid rgba(118,92,72,.3);
-  padding: 48px 25px;
-  box-shadow:
-    0 12px 30px rgba(63,76,85,.13),
-    4px 5px 0 rgba(255,255,255,.35);
-  transform: rotate(-.5deg);
-}
 
-/* Efek selotip kertas */
-.cover-inner::before {
-  content: "";
-  position: absolute;
-  width: 76px;
-  height: 23px;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-3deg);
-  background: rgba(197,166,106,.42);
-  border-left: 1px dashed rgba(118,92,72,.25);
-  border-right: 1px dashed rgba(118,92,72,.25);
-}
+/* SAMPUL DARK LUXURY PURPLE */
 
-/* Label perangko vintage */
-.cover-inner::after {
-  content: "CLASS OF 2026";
-  position: absolute;
-  top: 17px;
-  right: 12px;
-  padding: 6px 8px;
-  border: 1px dashed rgba(118,92,72,.55);
-  color: #806F60;
-  background: rgba(255,255,255,.35);
-  font: 8px Arial,sans-serif;
-  letter-spacing: 1px;
-  transform: rotate(7deg);
-}
-
-/* Judul bergaya buku kenangan */
-h1, h2 {
-  text-shadow: 1px 1px rgba(255,255,255,.7);
-}
-
-/* Bagian isi seperti halaman scrapbook */
-section {
+.cover {
+  isolation: isolate;
   background:
     radial-gradient(
-      circle at 10% 10%,
-      rgba(197,166,106,.08),
-      transparent 24%
+      ellipse at 50% 40%,
+      rgba(105,65,145,.28),
+      transparent 65%
     ),
-    #F3EBDD;
+    linear-gradient(180deg,#21152B,#09090D 80%) !important;
 }
 
-/* Bingkai halus pada setiap bagian */
-.section-inner {
+.cover-inner {
   position: relative;
-  padding: 30px 18px;
-  border: 1px dashed rgba(118,92,72,.28);
-  background: rgba(255,255,255,.23);
-}
-
-/* Ornamen bintang kecil */
-.section-inner::before {
-  content: "✧";
-  position: absolute;
-  top: 8px;
-  left: 12px;
-  color: #C5A66A;
-  font-size: 21px;
-}
-
-/* Foto seperti cetakan Polaroid */
-.photo-frame {
-  background: #F9F5ED;
-  border: 1px solid #D1B77E;
-  padding: 10px 10px 22px;
-  box-shadow:
-    3px 6px 15px rgba(75,65,52,.13);
-  transform: rotate(-2deg);
-}
-
-/* Selotip kecil pada foto */
-.photo-frame::before {
-  content: "";
-  position: absolute;
   z-index: 2;
-  width: 65px;
-  height: 18px;
-  top: -9px;
+  width: 100%;
+  max-width: 560px;
+  padding: 58px 28px 52px !important;
+  background:
+    linear-gradient(145deg,#21152B,#09090D 80%) !important;
+  border: 1px solid rgba(190,170,215,.6) !important;
+  box-shadow:
+    0 0 30px rgba(146,116,181,.2),
+    0 20px 60px rgba(0,0,0,.7) !important;
+  transform: none !important;
+}
+
+/* ORNAMEN ATAS */
+.cover-inner::before {
+  content: "✦";
+  position: absolute;
+  top: -18px;
   left: 50%;
-  transform: translateX(-50%) rotate(3deg);
-  background: rgba(197,166,106,.48);
+  transform: translateX(-50%);
+  color: #D5C7E8;
+  background: #09090D;
+  padding: 0 12px;
+  font-size: 23px;
 }
 
-/* Kartu informasi seperti potongan kertas */
-.details {
-  background:
-    linear-gradient(
-      145deg,
-      #F9F5ED,
-      #E9DFC9
-    );
-  border: 1px dashed rgba(118,92,72,.45);
-  box-shadow: 3px 5px 12px rgba(75,65,52,.08);
+/* ORNAMEN BAWAH */
+.cover-inner::after {
+  content: "✧  ACADEMIC LEGACY  ✧";
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 5px 13px;
+  color: #D5C7E8;
+  background: #09090D;
+  border: 0;
+  font: 8px Arial,sans-serif;
+  letter-spacing: 3px;
 }
 
-/* Countdown seperti label jurnal */
-.timebox {
-  background: #F9F5ED;
-  border: 1px dashed rgba(118,92,72,.45);
-  box-shadow: 2px 3px 7px rgba(75,65,52,.06);
-}
 
-/* Tombol bergaya label vintage */
-.btn {
-  border: 1px dashed #765C48;
-  box-shadow: 3px 4px 0 rgba(118,92,72,.13);
-  transition: .25s ease;
-}
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 3px 6px 0 rgba(118,92,72,.13);
-}
 
-/* Hiasan bagian bawah */
-footer {
-  border-top: 1px dashed rgba(118,92,72,.3);
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #A9C4D8,
-      #A9C4D8 8px,
-      #B5CCDC 8px,
-      #B5CCDC 16px
-    );
-}
-
-/* Tampilan HP */
-@media(max-width:480px) {
-  .cover-inner {
-    padding: 52px 18px 38px;
-  }
-
-  .section-inner {
-    padding: 28px 13px;
-  }
-
-  .photo-frame {
-    width: min(230px,70vw);
-  }
-}
     
 /* ===== DETAIL SCRAPBOOK VINTAGE ===== */
 
